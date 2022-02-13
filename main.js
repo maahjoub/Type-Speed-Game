@@ -1,19 +1,25 @@
-const wordEasy = [
-    'علي', 'رؤي', 'لين',
-]
-const wordnormal = [
-    'محمد', 'احمد', 'محمود',
-]
-const wordHard = [
-    'عبد الرحيم', 'عبد الرحمن', 'عبد الله',
+const words = [ 
+    
+    wordEasy = 
+    [
+        'علي', 'رؤي', 'لين',
+    ],
+
+    wordnormal = [
+        'محمد', 'احمد', 'محمود',
+    ],
+    wordHard = [
+        'عبد الرحيم', 'عبد الرحمن', 'عبد الله',
+    ]
 ]
 const lvls = {
     "Easy" : 3,
     "Normal" : 3,
-    "Hard" : 3 ,
+    "Hard" : 6,
 }
-let defaultLevelNAme = "Easy"
-let defaultLevelSeconds = lvls[defaultLevelNAme]
+
+
+
 let statrBtn = document.querySelector('.start')
 let lvlNAme = document.querySelector('.message .lvl')
 let secondsSpan = document.querySelector('.message .seconds')
@@ -30,11 +36,13 @@ level.forEach((item) => {
         item.setAttribute("checked", 'checked')
         console.log(item.value);
         lvlNAme.innerHTML = item.value
+        secondsSpan.innerHTML = lvls[item.value]
+        leftTimeSpan.innerHTML = lvls[item.value]
     }
 })
 
 //lvlNAme.innerHTML = defaultLevelNAme
-secondsSpan.innerHTML = defaultLevelSeconds
+//secondsSpan.innerHTML = defaultLevelSeconds
 leftTimeSpan.innerHTML = defaultLevelSeconds
 totalScore.innerHTML = wordEasy.length 
 
@@ -49,13 +57,13 @@ statrBtn.onclick =function () {
  function genWords() {
     if (lvlNAme.innerHTML === "Easy") {
         action(wordEasy)
-        startPlay()
+        startPlay(wordEasy)
     } else if (lvlNAme.innerHTML === "Normal") {
         action(wordnormal)
-        startPlay()
+        startPlay(wordnormal)
     } else if (lvlNAme.innerHTML === "Hard") {
         action(wordHard)
-        startPlay()
+        startPlay(wordHard)
     }
  }
  function action(wordArray) {
@@ -72,7 +80,7 @@ statrBtn.onclick =function () {
      }
 
  }
- function startPlay() {
+ function startPlay(words) {
      leftTimeSpan.innerHTML = defaultLevelSeconds
     let start = setInterval(() => {
         leftTimeSpan.innerHTML--
@@ -81,7 +89,7 @@ statrBtn.onclick =function () {
             if (theWord.innerHTML.toLowerCase() === Input.value.toLowerCase()) {
                 Input.value = ""
                 score.innerHTML++
-                if (wordEasy.length > 0 ) {
+                if (words.length > 0 ) {
                     genWords()
                 } else {
                 let span = document.createElement("span")
