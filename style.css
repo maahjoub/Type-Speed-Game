@@ -120,7 +120,11 @@ body {
 .options input {
     margin: 0 px 10px;
 }
-.Choose {}
+.Choose {
+    color: var(--main-color);
+    text-align: center;
+    padding: 10px 0px 5px;
+}
 @media (max-width:767px) {
     .message {
         font-size: 16px;
@@ -129,9 +133,8 @@ body {
     }
     .Choose {
         font-size: 20px;
-        text-align: center;
-        padding: 10px 0px 5px;
-        color: var(--main-color)
+        
+        
     }
     .finish .good  {
         font-size: 25px;
