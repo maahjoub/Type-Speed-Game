@@ -31,6 +31,8 @@ let score = document.querySelector('.score .got')
 let totalScore = document.querySelector('.score .total')
 let finishMsg = document.querySelector('.finish')
 let level = document.getElementsByName("level")
+let ChooseH2 = document.querySelector(".Choose")
+let options = document.querySelector(".options")
 var x = level.forEach((item) => {
     item.onclick = function () {
         item.setAttribute("checked", 'checked')
@@ -47,7 +49,9 @@ Input.onpaste = function () {
     return false
 }
 statrBtn.onclick =function () {
-    this.remove()
+    this.remove();
+    ChooseH2.remove();
+    options.remove();
     Input.focus()
     genWords()
 }
