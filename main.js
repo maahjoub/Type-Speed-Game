@@ -1,5 +1,5 @@
 const wordEasy = [
-    'Java Script', 'Html', 'python',
+    'علي', 'رؤي', 'لين',
 ]
 const wordnormal = [
     'محمد', 'احمد', 'محمود',
@@ -8,8 +8,8 @@ const wordHard = [
     'عبد الرحيم', 'عبد الرحمن', 'عبد الله',
 ]
 const lvls = {
-    "Easy" : 9,
-    "Normal" : 6,
+    "Easy" : 3,
+    "Normal" : 3,
     "Hard" : 3 ,
 }
 let defaultLevelNAme = "Easy"
@@ -49,10 +49,13 @@ statrBtn.onclick =function () {
  function genWords() {
     if (lvlNAme.innerHTML === "Easy") {
         action(wordEasy)
+        startPlay()
     } else if (lvlNAme.innerHTML === "Normal") {
         action(wordnormal)
+        startPlay()
     } else if (lvlNAme.innerHTML === "Hard") {
         action(wordHard)
+        startPlay()
     }
  }
  function action(wordArray) {
@@ -67,7 +70,7 @@ statrBtn.onclick =function () {
         div.appendChild(txt)
         upComing.appendChild(div)
      }
-    startPlay()
+
  }
  function startPlay() {
      leftTimeSpan.innerHTML = defaultLevelSeconds
@@ -78,7 +81,7 @@ statrBtn.onclick =function () {
             if (theWord.innerHTML.toLowerCase() === Input.value.toLowerCase()) {
                 Input.value = ""
                 score.innerHTML++
-                if (word.length > 0 ) {
+                if (wordEasy.length > 0 ) {
                     genWords()
                 } else {
                 let span = document.createElement("span")

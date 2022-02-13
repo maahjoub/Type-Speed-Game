@@ -112,18 +112,29 @@ body {
 .options {
     padding: 10px;
     margin-left: 15px;
-    color: #b706e3;
+    color: var(--main-color);
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 .options input {
     margin: 0 px 10px;
 }
+.Choose {}
 @media (max-width:767px) {
     .message {
         font-size: 16px;
         font-weight: bold;
         text-align: center;
+    }
+    .Choose {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0px 5px;
+        color: var(--main-color)
+    }
+    .finish .good  {
+        font-size: 25px;
+        font-weight: bold;
     }
 }
