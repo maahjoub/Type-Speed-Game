@@ -22,28 +22,25 @@ const lvls = {
 
 let statrBtn = document.querySelector('.start')
 let lvlNAme = document.querySelector('.message .lvl')
-let secondsSpan = document.querySelector('.message .seconds')
+var secondsSpan = document.querySelector('.message .seconds')
 let theWord = document.querySelector('.the-word')
 let upComing = document.querySelector('.upcoming-words')
 let Input = document.querySelector('.input')
-let leftTimeSpan = document.querySelector('.time span')
+var leftTimeSpan = document.querySelector('.time span')
 let score = document.querySelector('.score .got')
 let totalScore = document.querySelector('.score .total')
 let finishMsg = document.querySelector('.finish')
 let level = document.getElementsByName("level")
-level.forEach((item) => {
+var x = level.forEach((item) => {
     item.onclick = function () {
         item.setAttribute("checked", 'checked')
-        console.log(item.value);
         lvlNAme.innerHTML = item.value
         secondsSpan.innerHTML = lvls[item.value]
         leftTimeSpan.innerHTML = lvls[item.value]
+        defaultLevelSeconds = parseInt(lvls[item.value])
     }
 })
 
-//lvlNAme.innerHTML = defaultLevelNAme
-//secondsSpan.innerHTML = defaultLevelSeconds
-leftTimeSpan.innerHTML = defaultLevelSeconds
 totalScore.innerHTML = wordEasy.length 
 
 Input.onpaste = function () {
