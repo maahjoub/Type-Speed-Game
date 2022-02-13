@@ -93,6 +93,9 @@ statrBtn.onclick =function () {
                 if (words.length > 0 ) {
                     genWords()
                 } else {
+                theWord.remove()
+                Input.remove()
+                upComing.remove()
                 let span = document.createElement("span")
                 span.className = 'good'
                 let spanText = document.createTextNode("Congratolations You Win ")
