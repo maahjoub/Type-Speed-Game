@@ -42,59 +42,88 @@ body {
   content: " ]";
 }
 .start {
-    font-size: 22px;
-    font-weight: bold;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    color: #fff;
-    background-color: #088030;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #088030;
 }
 .the-word {
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    user-select: none;
-    color: var(--main-color);
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  user-select: none;
+  color: var(--main-color);
 }
 .input {
-    margin: 15px auto;
-    display: block;
-    padding: 10px;
-    width: 90%;
-    text-transform: capitalize;
-    border: 2px solid var(--main-color);
-    text-align: center;
-    caret-color: var(--main-color);
-    font-size: 20px;
+  margin: 15px auto;
+  display: block;
+  padding: 10px;
+  width: 90%;
+  text-transform: capitalize;
+  border: 2px solid var(--main-color);
+  text-align: center;
+  caret-color: var(--main-color);
+  font-size: 20px;
 }
 .input:focus {
-    outline: none;
+  outline: none;
 }
 .upcoming-words {
-    background-color: #fff;
-    margin: 10px 0px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  background-color: #fff;
+  margin: 10px 0px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.upcoming-words div{
-    background-color: var(--main-color);
-    color: #fff;
-    font-weight: bold;
-    margin: 5px;
-    padding: 7px;
-    border-radius: 6px;
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  margin: 5px;
+  padding: 7px;
+  border-radius: 6px;
 }
 .control {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+}
+.control span {
+  font-weight: bold;
+  color: #088030;
+}
+.finish {
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+}
+.finish .good {
+  color: var(--main-color);
+}
+.finish .bad {
+  color: red;
+}
+.options {
     padding: 10px;
+    margin-left: 15px;
+    color: #b706e3;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-.control span{
-    font-weight: bold;
-    color: #088030;
+.options input {
+    margin: 0 px 10px;
 }
-.control .score{}
+@media (max-width:767px) {
+    .message {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+}

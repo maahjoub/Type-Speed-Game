@@ -12,20 +12,22 @@
         <div class="name">Type Speed Game</div>
         <div class="container">
             <div class="message">
-                you Are Playing On 
+                you Are Playing In 
                 <span class="lvl"></span> Level & You have <span class="seconds"></span> seconds to Type The Word
+            </div>
+            <div class="options">
+
+                <input type="radio" id="easy" name="level"  value="Easy"> Easy
+                <input type="radio" id="normal" name="level" value="Normal"> Normal
+                <input type="radio" id="hard" name="level" value="Hard"> Hard
             </div>
             <div class="start">Start Playing</div>
             <div class="the-word"></div>
             <input type="text" name="" class="input">
-            <div class="upcoming-words">
-                <div>one</div>
-                <div>one</div>
-                <div>one</div>
-            </div>
+            <div class="upcoming-words"></div>
             <div class="control">
-                <div class="time">Time Left : seconds</div>
-                <div class="score"> Score : 0 From </div>
+                <div class="time">Time Left : <span></span> seconds</div>
+                <div class="score"> Score : <span class="got">0</span> From <span class="total"></span> </div>
             </div>
             <div class="finish"></div>
         </div>
