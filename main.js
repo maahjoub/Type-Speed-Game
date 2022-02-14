@@ -30,6 +30,7 @@ var leftTimeSpan = document.querySelector('.time span')
 let score = document.querySelector('.score .got')
 let totalScore = document.querySelector('.score .total')
 let finishMsg = document.querySelector('.finish')
+let finishimg = document.querySelector('.finish img')
 let level = document.getElementsByName("level")
 let ChooseH2 = document.querySelector(".Choose")
 let options = document.querySelector(".options")
@@ -98,6 +99,7 @@ statrBtn.onclick =function () {
                 upComing.remove()
                 let span = document.createElement("span")
                 span.className = 'good'
+                finishimg.className = 'show'
                 let spanText = document.createTextNode("Congratolations You Win ")
                 span.appendChild(spanText)
                 finishMsg.appendChild(span)

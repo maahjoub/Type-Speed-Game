@@ -105,9 +105,17 @@ body {
 }
 .finish .good {
   color: var(--main-color);
+  display: block;
 }
 .finish .bad {
   color: red;
+}
+.finish img {
+  max-width: 100%;
+  background-color: #dbd2d2;
+  padding: 2px;
+  border: 2px solid #b5b2b2;
+  border-radius: 6px;
 }
 .options {
     padding: 10px;
@@ -124,6 +132,12 @@ body {
     color: var(--main-color);
     text-align: center;
     padding: 10px 0px 5px;
+}
+.hide {
+  display: none;
+} 
+.show {
+  display: inline;
 }
 @media (max-width:767px) {
     .message {
